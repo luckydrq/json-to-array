@@ -12,6 +12,7 @@ module.exports = function(obj, opts) {
   if (!Array.isArray(excepts)) excepts = [excepts];
 
   var arr = [];
+  // include all enumerable properties
   Object.keys(obj).forEach(function(key) {
     if (~excepts.indexOf(key)) return;
 
